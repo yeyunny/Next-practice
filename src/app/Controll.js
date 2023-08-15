@@ -26,7 +26,7 @@ export function Controll() {
               onClick={() => {
                 const options = { method: "DELETE" };
 
-                fetch("http://localhost:9999/topics/" + id, options)
+                fetch(process.env.NEXT_PUBLIC_API_URL + "topics/" + id, options)
                   .then((resp) => resp.json())
                   .then((result) => {
                     //router를 사용하여 홈으로 돌아가게 하기
