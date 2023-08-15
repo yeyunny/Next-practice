@@ -30,6 +30,7 @@ export default function Create() {
           .then((result) => {
             console.log(result);
             const lastid = result.id;
+            router.refresh();
             //새로 생성된(가장 마지막) id의 글로 리디렉션
             router.push(`/read/${lastid}`);
           });
