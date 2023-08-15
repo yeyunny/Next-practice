@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import { Controll } from "./Controll";
 
 export const metadata = {
   title: "NEXTJS Practice",
@@ -30,17 +31,7 @@ export default async function RootLayout({ children }) {
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create">CREATE</Link>
-          </li>
-          <li>
-            <Link href="/update/1">UPDATE</Link>
-          </li>
-          <li>
-            <input type="button" value="delete" />
-          </li>
-        </ul>
+        <Controll />
       </body>
     </html>
   );
